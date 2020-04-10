@@ -1,11 +1,24 @@
 {
   "manifest_version": 2,
   "name": "Whole Foods Delivery Slot",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "content_scripts": [
     {
-      "matches": ["https://www.amazon.com/gp/buy/shipoptionselect/handlers/display.html?hasWorkingJavascript=1"],
-      "js": ["whole_foods_delivery_slot.js"]
+      "matches": [
+        "https://www.amazon.com/gp/buy/shipoptionselect/handlers/display.html?hasWorkingJavascript=1"
+      ],
+      "js": [
+        "whole_foods_delivery_slot.js"
+      ]
     }
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": false
+  },
+  "permissions": [
+    "notifications"
   ]
 }
