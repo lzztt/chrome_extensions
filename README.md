@@ -1,8 +1,8 @@
 # whole_foods_delivery_slot Chrome extension
 You may be blocked by the "No delivery windows available" message during Whole Foods checkout.
-This extension will refresh the delivery time slot page periodically. It will auto-select the next available slot and go to the next checkout step.
+This extension will keep refreshing the delivery time slot page periodically until it finds some available slots. It will auto-select the next available slot and go to the next checkout step.
 
-> NOTE: The delivery slot may be gone during checkout. Just be patient and let the extension find a new slot for you, and be quick next time.
+> NOTE: Be patient. It may take some time to find a slot. The delivery slot may be gone during checkout. Let the extension find the next available slot for you then check out quickly.
 
 ## Installation
 1. Clone (or download + unzip) this repository ([howto](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)).
