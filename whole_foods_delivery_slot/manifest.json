@@ -8,7 +8,7 @@
         "https://www.amazon.com/gp/buy/shipoptionselect/handlers/display.html?hasWorkingJavascript=1"
       ],
       "js": [
-        "whole_foods_delivery_slot.js"
+        "contentScript.js"
       ]
     }
   ],
