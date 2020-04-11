@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "Grocery Delivery Time",
+  "description": "Find Delivery Time for Whole Foods, Amazon Fresh, Costco Sameday and Instacart.",
+  "version": "1.0.0",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.amazon.com/gp/buy/shipoptionselect/handlers/display.html?hasWorkingJavascript=1",
+        "https://sameday.costco.com/store/checkout_v3",
+        "https://www.instacart.com/store/checkout_v3"
+      ],
+      "js": [
+        "contentScript.js"
+      ]
+    }
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": false
+  },
+  "permissions": [
+    "notifications"
+  ]
+}
