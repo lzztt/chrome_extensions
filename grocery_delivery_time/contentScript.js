@@ -94,8 +94,10 @@ const check = retry => {
     if (retry > 0) {
         setTimeout(check, defer, retry - 1)
     } else {
+        const error = `${location.href}: page may be slow or has been changed.`;
+        console.error(error)
         chrome.runtime.sendMessage({
-            time: 'Failed to parse page: page may be slow or has been changed.',
+            time: error,
             store: 'Error',
         });
         location.reload();
