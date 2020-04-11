@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "Costco Sameday Delivery Time",
+  "version": "1.0.0",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://sameday.costco.com/store/checkout_v3"
+      ],
+      "js": [
+        "contentScript.js"
+      ]
+    }
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": false
+  },
+  "permissions": [
+    "notifications"
+  ]
+}
