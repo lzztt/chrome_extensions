@@ -1,4 +1,4 @@
-# whole_foods_delivery_slot Chrome extension
+# Grocery Delivery Time Chrome extension
 You may get blocked by the "No delivery times available" message during [Amazon Fresh](https://www.amazon.com/alm/storefront?almBrandId=QW1hem9uIEZyZXNo), [Whole Foods](https://www.amazon.com/alm/storefront/?almBrandId=VUZHIFdob2xlIEZvb2Rz) or [Costco Sameday](https://sameday.costco.com) checkout.
 This extension will keep refreshing the delivery time page periodically until it finds some available time. It will auto-select the next available time and go to the next checkout step.
 
