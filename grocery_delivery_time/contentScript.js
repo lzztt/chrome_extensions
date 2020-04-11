@@ -1,5 +1,5 @@
 const REFRESH_SECONDS = 10;
-const DEFER_SECONDS = 0.25;
+const DEFER_SECONDS = 1;
 const NOT_FOUND_PREFIX = 'No';
 const AMAZON_FRESH = 'Amazon Fresh';
 const WHOLE_FOODS = 'Whole Foods';
