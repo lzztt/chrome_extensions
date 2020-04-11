@@ -9,8 +9,6 @@ const AMAZON_URL = 'https://www.amazon.com/gp/buy/shipoptionselect/handlers/disp
 const COSTCO_URL = 'https://sameday.costco.com/store/checkout_v3';
 const INSTACART_URL = 'https://www.instacart.com/store/checkout_v3';
 const SUBMIT_SELECTOR = 'input[type=submit]';
-const AMAZON_FRESH_SELECTOR = 'div.Date-slot-container[style="display: block;"]';
-const WHOLE_FOODS_SELECTOR = 'div.ufss-slot.ufss-available';
 
 const NOT_FOUND = {
     store: '',
