@@ -14,7 +14,7 @@ const NOT_FOUND = {
     store: '',
     time: '',
     nodes: [],
-}
+};
 
 const getTimeAndNodes_Instacart = () => {
     const node = document.querySelector('button[aria-label="Change Delivery time"]');
@@ -26,7 +26,7 @@ const getTimeAndNodes_Instacart = () => {
         store: COSTCO_URL === location.href ? COSTCO_SAMEDAY : INSTACART,
         time: node.nextElementSibling.innerText.trim(),
         nodes: [node.nextElementSibling.querySelector('input[name=delivery_option]')].filter(i => i),
-    }
+    };
 };
 
 const getTimeAndNodes_AmazonFresh = () => {
@@ -39,7 +39,7 @@ const getTimeAndNodes_AmazonFresh = () => {
         store: AMAZON_FRESH,
         time: node.innerText.trim().substr(13).trim(),
         nodes: [document.querySelector(SUBMIT_SELECTOR)].filter(i => i),
-    }
+    };
 };
 
 const getTimeAndNodes_WholeFoods = () => {
@@ -53,9 +53,9 @@ const getTimeAndNodes_WholeFoods = () => {
         time: node.innerText.trim(),
         nodes: [
             node.querySelector('div.ufss-slot.ufss-available'),
-            document.querySelector(SUBMIT_SELECTOR)
+            document.querySelector(SUBMIT_SELECTOR),
         ].filter(i => i),
-    }
+    };
 };
 
 const getTimeAndNodes = url => {
@@ -71,8 +71,8 @@ const getTimeAndNodes = url => {
             return data;
         default:
             return NOT_FOUND;
-    };
-}
+    }
+};
 
 const check = retry => {
     const defer = DEFER_SECONDS * 1000;
@@ -90,17 +90,17 @@ const check = retry => {
     }
 
     if (retry > 0) {
-        setTimeout(check, defer, retry - 1)
+        setTimeout(check, defer, retry - 1);
     } else {
         const error = `${location.href}: page may be slow or has been changed.`;
-        console.error(error)
+        console.error(error);
         chrome.runtime.sendMessage({
             time: error,
             store: 'Error',
         });
         location.reload();
     }
-}
+};
 
 const retryCount = REFRESH_SECONDS / DEFER_SECONDS;
 check(retryCount);
